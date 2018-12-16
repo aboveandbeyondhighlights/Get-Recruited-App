@@ -8,7 +8,6 @@
 // layout file, like app/views/layouts/application.html.erb
 //= require jquery
 //= require jquery_ujs
-console.log('Hello World from Webpacker')
 // Support component names relative to this directory:
 var componentRequireContext = require.context("components", true)
 var ReactRailsUJS = require("react_ujs")

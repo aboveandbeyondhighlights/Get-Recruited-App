@@ -15,6 +15,7 @@ gem 'react-rails'
 gem 'jquery-rails'
 gem 'semantic-ui-sass'
 gem 'devise'
+gem 'searchkick'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
