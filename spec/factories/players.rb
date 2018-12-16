@@ -7,7 +7,7 @@ FactoryBot.define do
     birthday { Faker::Date.birthday(13, 18) }
     foot { ['right', 'left'].sample }
     nationality { Faker::Nation.nationality }
-    sex { Faker::Identification.gender }
+    sex { ['male', 'female'].sample }
     graduation_year { Faker::Number.between(1998, 2005) }
     highschool { "#{Faker::Team.mascot} High School" }
     highschool_goals { Faker::Number.digit }
