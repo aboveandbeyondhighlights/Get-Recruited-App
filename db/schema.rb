@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_15_193054) do
+ActiveRecord::Schema.define(version: 2018_12_16_151351) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "colleges", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "city", null: false
+    t.string "state", null: false
+    t.string "school_type"
+    t.string "nickname", null: false
+    t.string "conference", null: false
+    t.string "website"
+    t.string "division"
+    t.string "governing_body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "players", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,7 +43,7 @@ ActiveRecord::Schema.define(version: 2018_12_15_193054) do
     t.string "sex", default: "", null: false
     t.integer "highschool_goals"
     t.integer "highschool_assists"
-    t.integer "highschool_position"
+    t.string "highschool_position"
     t.string "state", default: "", null: false
     t.string "city", default: "", null: false
     t.string "street_address", default: "", null: false
@@ -37,7 +51,7 @@ ActiveRecord::Schema.define(version: 2018_12_15_193054) do
     t.string "club_name", default: "", null: false
     t.integer "club_goals"
     t.integer "club_assists"
-    t.integer "club_position"
+    t.string "club_position"
     t.string "height", default: "", null: false
     t.integer "weight"
     t.string "highlight_video_link"

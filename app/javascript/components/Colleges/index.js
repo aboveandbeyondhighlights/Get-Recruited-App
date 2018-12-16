@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
 import { Container, Header, Card, Icon, Image } from 'semantic-ui-react';
 
-class Players extends Component {
+class Colleges extends Component {
   constructor(props) {
     super(props);
   }
 
+
   render() {
-    const { players } = this.props;
+    const { colleges } = this.props;
 
     return (
       <React.Fragment>
         <Container>
-          <Header as="h1">Players</Header>
+          <Header as="h1">Colleges</Header>
           <Card.Group>
-            { players.map((player) => {
+            {colleges.map((college) => {
               return(
                 <Card>
                   <Image src='/images/avatar/large/matthew.png' />
                   <Card.Content>
-                    <Card.Header>{player.first_name} {player.last_name}</Card.Header>
+                    <Card.Header>{college.name}</Card.Header>
                     <Card.Meta>
-                      <span className='date'>Graduation Year: {player.graduation_year}</span>
+                      <span className='date'>City: {college.city}</span>
                     </Card.Meta>
                     <Card.Meta>
-                      <span className='date'>Position: {player.highschool_position}</span>
+                      <span className='date'>State: {college.state}</span>
                     </Card.Meta>
                   </Card.Content>
                 </Card>
@@ -36,4 +37,5 @@ class Players extends Component {
     );
   }
 }
-export default Players;
+
+export default Colleges;

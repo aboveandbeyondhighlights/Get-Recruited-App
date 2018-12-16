@@ -41,6 +41,16 @@ class Navigation extends Component {
 
             <Menu.Item
               as="a"
+              name="colleges"
+              active={activeItem === 'colleges'}
+              position="right"
+              onClick={() => this.handleItemClick}
+            >
+              Colleges
+            </Menu.Item>
+
+            <Menu.Item
+              as="a"
               name="blog"
               active={activeItem === 'blog'}
               position="right"

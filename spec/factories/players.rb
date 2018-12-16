@@ -8,7 +8,7 @@ FactoryBot.define do
     foot { ['right', 'left'].sample }
     nationality { Faker::Nation.nationality }
     sex { ['male', 'female'].sample }
-    graduation_year { Faker::Number.between(1998, 2005) }
+    graduation_year { Faker::Number.between(2019, 2025) }
     highschool { "#{Faker::Team.mascot} High School" }
     highschool_goals { Faker::Number.digit }
     highschool_assists { Faker::Number.digit }
@@ -16,7 +16,7 @@ FactoryBot.define do
     phone_number { Faker::PhoneNumber.phone_number }
     state { Faker::Address.state }
     city { Faker::Address.city }
-    address { Faker::Address.street_address }
+    street_address { Faker::Address.street_address }
     club_name { Faker::Team.mascot }
     club_position { ['RightBack', 'LeftBack', 'GoalKeeper', 'Right Centerback', 'Left Centerback', 'Center Defensive Mid', 'Center Mid', 'Center Attacking Mid', 'Forward', 'Left Wing', 'Right Wing'].sample }
     club_goals { Faker::Number.digit }
