@@ -14,4 +14,8 @@
  *= require_self
  //= require semantic-ui
  */
-@import "semantic-ui"
+@import "semantic-ui";
+
+body {
+  background: #F7F7F7;
+}
