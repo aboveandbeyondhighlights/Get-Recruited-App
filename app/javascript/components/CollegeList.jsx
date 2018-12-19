@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Header, Card, Icon, Image } from 'semantic-ui-react';
 
-class Colleges extends Component {
+class CollegeList extends Component {
   constructor(props) {
     super(props);
   }
@@ -20,7 +20,9 @@ class Colleges extends Component {
                 <Card>
                   <Image src='/images/avatar/large/matthew.png' />
                   <Card.Content>
-                    <Card.Header>{college.name}</Card.Header>
+                    <a href={`http://localhost:5000/colleges/${college.id}`}>
+                      <Card.Header>{college.name}</Card.Header>
+                    </a>
                     <Card.Meta>
                       <span className='date'>City: {college.city}</span>
                     </Card.Meta>
@@ -38,4 +40,5 @@ class Colleges extends Component {
   }
 }
 
-export default Colleges;
+export default CollegeList;
+

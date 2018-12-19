@@ -1,7 +1,7 @@
 <%= react_component("Navigation", {}) %>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<%= react_component("Colleges", { colleges: @colleges }) %>
+<%= react_component("CollegeList", { colleges: @colleges }) %>
 <div class="ui container center aligned pagination">
   <%= paginate @colleges %>
 </div>
